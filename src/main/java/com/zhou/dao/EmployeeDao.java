@@ -1,7 +1,7 @@
 package com.zhou.dao;
 
-import com.zhou.dao.pojo.Department;
-import com.zhou.dao.pojo.Employee;
+import com.zhou.pojo.Department;
+import com.zhou.pojo.Employee;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -28,8 +28,8 @@ public class EmployeeDao
     }
     //增删改查
     //主键自增，用static
-    private static Integer initID =1006;
-    public void save(Employee employee) //从表传入员工信息employee
+    private static Integer initID =10;
+    public void save(Employee employee)
     {
         if(employee.getId()==null)
         {

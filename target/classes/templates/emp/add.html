@@ -57,10 +57,10 @@
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 					<!--放置from表单,用来添加雇员-->
 
-					<form th:action="@{/emp}" method="post">
+					<form th:action="@{/empAdd}" method="post">
 						<div class="form-group">
 							<label>LastName</label>
-							<input type="text"  name="lastName" class="form-control" placeholder="海绵宝宝">
+							<input  type="text"  name="lastName" class="form-control" placeholder="海绵宝宝">
 						</div>
 						<div class="form-group">
 							<label>Email</label>
@@ -79,6 +79,7 @@
 						</div>
 						<div class="form-group">
 							<label>department</label>
+							<!-- 我们在EmployeeController接受的是一个Emlpoyee，这里需要提交的是其中一个属性department.id，而不是department对象-->
 							<select class="form-control" name="department.id">
 								<option th:each="dept:${departments}" th:text="${dept.getDepartmentName()}" th:value="${dept.getId()}"></option>
 

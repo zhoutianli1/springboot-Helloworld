@@ -1,6 +1,6 @@
 package com.zhou.dao;
 
-import com.zhou.dao.pojo.Department;
+import com.zhou.pojo.Department;
 
 import org.springframework.stereotype.Repository;
 
