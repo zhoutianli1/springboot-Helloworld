@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Map;
-
-@RestController
 /*
 @Controller标识一个Spring类是Spring MVC controller处理器
 @RestController注解相当于@ResponseBody ＋ @Controller合在一起的作用。
@@ -22,6 +20,8 @@ import java.util.Map;
 1.使用@Controller 注解，在对应的方法上，视图解析器可以解析return 的jsp,html页面，并且跳转到相应页面
 若返回json等内容到页面，则需要加@ResponseBody注解
  */
+@RestController
+
 public class JDBCController {
     @Autowired
     JdbcTemplate jdbcTemplate;  //调用里面方法进行CUDR,   spring将很多操作封装在了JdbcTemplate

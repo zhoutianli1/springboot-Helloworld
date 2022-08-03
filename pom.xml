@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.2</version>
+        <version>2.7.1</version>
         <relativePath/> <!-- lookup parent from repository ,公司电脑是2.7.2-->
     </parent>
     <groupId>com.zhou</groupId>
@@ -63,12 +63,17 @@
             <artifactId>thymeleaf-extras-java8time</artifactId>
         </dependency>
 
+
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-java8time</artifactId>
+        </dependency>
+
         <!-- lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-
         <!-- 是否要单元测试-->
 
     </dependencies>

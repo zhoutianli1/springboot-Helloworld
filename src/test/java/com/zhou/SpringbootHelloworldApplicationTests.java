@@ -16,7 +16,7 @@ class SpringbootHelloworldApplicationTests {
     @Test
     void contextLoads() throws SQLException {
         //查看一下默认数据源
-        System.out.println(dataSource.getClass());    //DataSourceConfi... 中有4个数据源，默认是Hikiar, 在yml中用type去更改配置
+        System.out.println("目前连接的数据源是："+dataSource.getClass());    //DataSourceConfi... 中有4个数据源，默认是Hikiar, 在yml中用type去更改配置
         //查看数据库连接
         Connection connection =  dataSource.getConnection();
         System.out.println(connection);
