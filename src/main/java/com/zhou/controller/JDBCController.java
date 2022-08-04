@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 /*
@@ -23,7 +24,10 @@ import java.util.Map;
 @RestController
 
 public class JDBCController {
-    @Autowired
+    // @Autowired报错
+    // https://blog.csdn.net/Hellowenpan/article/details/85249679?spm=1001.2101.3001.6650.5&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-5-85249679-blog-109328754.pc_relevant_multi_platform_featuressortv2dupreplace&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-5-85249679-blog-109328754.pc_relevant_multi_platform_featuressortv2dupreplace&utm_relevant_index=10
+    //
+    @Resource
     JdbcTemplate jdbcTemplate;  //调用里面方法进行CUDR,   spring将很多操作封装在了JdbcTemplate
 
     //没有对应数据库实体类，利用map 获取数据库中实体类
@@ -33,6 +37,7 @@ public class JDBCController {
     {
         String sql = "select * from user";
         List<Map<String, Object>> list_maps = jdbcTemplate.queryForList(sql);
+        System.out.println("数据库连接成功");
         return list_maps;
     }
     @GetMapping("/deleteUser")
